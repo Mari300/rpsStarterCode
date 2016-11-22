@@ -1,15 +1,17 @@
 // Task 1: Create a function that randomly chooses among 'rock', 'paper', or 'scissors'.
 var generateComputerChoice = function () {
     // Task 1, Step 1: Create an array with three elements ("rock", "paper" and "scissors").
-        
+       var Handsigns = ["rock", "paper", "scissors"] ;
     // Task 1, Step 2: Use the JavaScript Math function to generate a random whole
     // number between 0 and 2. Be sure to save it to a variable.
+    var RandomNumber =   Math.floor (Math.random ()  * 3);
+    
         
     // Task 1, Step 3: Use this randomly generated number to pull a value from the
     // array (eg myArray[randomNum])
-        
+    var ComputerChoice = Handsigns[RandomNumber];
     // Task 1, Step 4: return this new value
-        
+    return ComputerChoice;
 };
 
 // Task 2: Create a function that compares the userChoice and the computerChoice
@@ -19,9 +21,15 @@ var pickWinner = function (userChoice, computerChoice) {
     console.log("computer choice: " + computerChoice);
     // Task 2, Step 1: Create an "if/else if/else" statement that compares the
     // userChoice and computerChoice under any possible game outcome.
-       
+    //if (userChoice = Handsigns[0] )
+    if (computerChoice == "rock" && userChoice =="scissors" || computerChoice =="scissors" && userChoice =="paper" || computerChoice=="paper" && userChoice=="rock") {
+        console.log("Computer Wins!");
+    }
+    
+       if(computerChoice == "rock" && userChoice)
     // Task 2, Step 2: Depending on who is the winner of the game console.log
     // either "user wins", "computer wins" or "draw"
+    
 
     // Task 4: Show `computerChoice` in HTML after the words "Computer's choice:"
     
